@@ -1,0 +1,24 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/cucumber-level/UI/refs/heads/main/ReOrion')))()
+
+local Window = OrionLib:MakeWindow({Name = "Black's Admin Obby HUB", HidePremium = false, SaveConfig = false, IntroEnabled = true, IntroText = "Made By Cucumber", IntroIcon = "rbxassetid://7733658271", })
+
+local ImportantTab = Window:MakeTab({
+    Name = "IMPORTANT!!!",
+    Icon = "rbxassetid://7733658271",
+    PremiumOnly = false
+})
+
+ImportantTab:AddButton({
+    Name = "1인자 얻기",
+    Callback = function()
+        humanoidRootPart.CFrame = CFrame.new(637.51886, -59.0579033, -40.8976326, 0.361625701, -0.491880715, -0.792010248, 1.97935908e-08, 0.849501669, -0.527585983, 0.932323337, 0.190788627, 0.307201654)
+        wait(0.1)
+        humanoidRootPart.CFrame = CFrame.new(-19.2350636, -56.6954956, -38.8692169, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+    end
+})
+
+OrionLib:Init()
